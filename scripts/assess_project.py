@@ -24,6 +24,18 @@ checks = {
     "P1-03": (file_exists("scripts/update_status.py"), "scripts/update_status.py (automated file check)"),
     "P1-06": (file_exists("docs/QUALITY_AND_EVIDENCE.md"), "docs/QUALITY_AND_EVIDENCE.md (automated file check)"),
     "P1-07": (file_exists("tests/test_project_status.py"), "tests/test_project_status.py (automated file check)"),
+    "P1-09": (file_exists("docs/TELEMETRY_AND_SYNC.md"), "docs/TELEMETRY_AND_SYNC.md (automated file check)"),
+    "P1-10": (
+        file_exists("templates/private-repo/scripts/sync_public.py")
+        and file_exists("tests/test_private_repo_template.py"),
+        "templates/private-repo/scripts/sync_public.py + tests/test_private_repo_template.py (automated file check)",
+    ),
+    "P1-11": (file_exists("docs/CHATGPT_INTEGRATION.md"), "docs/CHATGPT_INTEGRATION.md (automated file check)"),
+    "P1-12": (
+        file_exists("templates/private-repo/scripts/learning_events.py")
+        and file_exists("tests/test_private_learning_events.py"),
+        "templates/private-repo/scripts/learning_events.py + tests/test_private_learning_events.py (automated file check)",
+    ),
     "P1-08": (
         file_exists(".github/workflows/project-status.yml") and "peter-evans/create-pull-request@" in workflow,
         ".github/workflows/project-status.yml (automated file check; execution unverified)",

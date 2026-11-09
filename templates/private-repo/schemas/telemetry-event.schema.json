@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional minimal Dutch learning event",
+  "description": "Schema only. Collection is disabled until explicitly opted in.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "event_id",
+    "event_date",
+    "event_type",
+    "source"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{8,80}$"
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "event_type": {
+      "enum": [
+        "lesson_generated",
+        "lesson_acknowledged",
+        "exercise_responded",
+        "practice_self_reported",
+        "delayed_transfer_reported"
+      ]
+    },
+    "source": {
+      "enum": [
+        "task_run_metadata",
+        "explicit_user_action",
+        "consented_manual_entry",
+        "consented_integration"
+      ]
+    },
+    "lesson_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+    },
+    "modality": {
+      "enum": [
+        "reading",
+        "writing",
+        "listening",
+        "speaking",
+        "mixed"
+      ]
+    },
+    "evidence_level": {
+      "enum": [
+        "exposed",
+        "recognized",
+        "prompted_use",
+        "independent_use",
+        "delayed_transfer",
+        "insufficient_evidence"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

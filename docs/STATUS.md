@@ -28,8 +28,8 @@ Verified: **10 / 12** · Needs review: **0** · Not evidenced: **2**
 - [x] **P1-06** Linguistic QA and learning-evidence rubric documented (verified) — evidence: docs/QUALITY_AND_EVIDENCE.md (automated file check)
 - [x] **P1-07** Status-report regression test file added (verified) — evidence: tests/test_project_status.py (automated file check)
 - [x] **P1-08** PR-based status automation configured (verified) — evidence: .github/workflows/project-status.yml (automated file check; execution unverified)
-- [x] **P1-09** Public telemetry and privacy boundary documented (verified) — evidence: docs/TELEMETRY_AND_SYNC.md (file existence; design only)
-- [x] **P1-10** Private repo sync starter and tests available (verified) — evidence: templates/private-repo/ and tests/test_private_repo_template.py (files; not deployed)
+- [x] **P1-09** Public telemetry and privacy boundary documented (verified) — evidence: docs/TELEMETRY_AND_SYNC.md (automated file check)
+- [x] **P1-10** Private repo sync starter and tests available (verified) — evidence: templates/private-repo/scripts/sync_public.py + tests/test_private_repo_template.py (automated file check)
 - [x] **P1-11** ChatGPT event-to-private-GitHub integration contract documented (verified) — evidence: docs/CHATGPT_INTEGRATION.md (automated file check)
 - [x] **P1-12** Private consented event report starter and tests added (verified) — evidence: templates/private-repo/scripts/learning_events.py + tests/test_private_learning_events.py (automated file check)
 

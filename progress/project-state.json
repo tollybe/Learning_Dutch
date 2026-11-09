@@ -94,13 +94,13 @@
           "id": "P1-09",
           "title": "Public telemetry and privacy boundary documented",
           "status": "verified",
-          "evidence": "docs/TELEMETRY_AND_SYNC.md (file existence; design only)"
+          "evidence": "docs/TELEMETRY_AND_SYNC.md (automated file check)"
         },
         {
           "id": "P1-10",
           "title": "Private repo sync starter and tests available",
           "status": "verified",
-          "evidence": "templates/private-repo/ and tests/test_private_repo_template.py (files; not deployed)"
+          "evidence": "templates/private-repo/scripts/sync_public.py + tests/test_private_repo_template.py (automated file check)"
         },
         {
           "id": "P1-11",

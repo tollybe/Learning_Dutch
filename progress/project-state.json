@@ -1,7 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "reviewed_at": "2026-11-09",
-  "policy": "Tasks are only marked done with evidence. This is project status, not a learner proficiency score.",
+  "policy": "Task completion reflects documented project implementation evidence, not proficiency. Some checks are automated, some are user-reported. Automation success and effectiveness require separate verification.",
   "phases": [
     {
       "id": "phase-0",
@@ -72,6 +71,24 @@
           "title": "Status workflow successful after merge",
           "status": "not_evidenced",
           "evidence": null
+        },
+        {
+          "id": "P1-06",
+          "title": "Linguistic QA and learning-evidence rubric documented",
+          "status": "verified",
+          "evidence": "docs/QUALITY_AND_EVIDENCE.md (automated file check)"
+        },
+        {
+          "id": "P1-07",
+          "title": "Status-report regression test file added",
+          "status": "verified",
+          "evidence": "tests/test_project_status.py (automated file check)"
+        },
+        {
+          "id": "P1-08",
+          "title": "PR-based status automation configured",
+          "status": "verified",
+          "evidence": ".github/workflows/project-status.yml (automated file check; execution unverified)"
         }
       ]
     },
@@ -123,5 +140,6 @@
         }
       ]
     }
-  ]
+  ],
+  "evidence_updated_at": "2026-11-09"
 }

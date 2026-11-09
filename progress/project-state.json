@@ -146,7 +146,7 @@
         },
         {
           "id": "P2-05",
-          "title": "Learner explicitly opts in before event capture",
+          "title": "Private event-report pipeline tested without real learner data",
           "status": "not_evidenced",
           "evidence": null
         },

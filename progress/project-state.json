@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "reviewed_at": "2026-11-09",
+  "policy": "Tasks are only marked done with evidence. This is project status, not a learner proficiency score.",
+  "phases": [
+    {
+      "id": "phase-0",
+      "name": "Preserve existing habits",
+      "tasks": [
+        {
+          "id": "P0-01",
+          "title": "Daily word habit exists",
+          "status": "verified",
+          "evidence": "README.md (word archive); external daily reminder reported by learner"
+        },
+        {
+          "id": "P0-02",
+          "title": "Wed/Sat B1 practice exists",
+          "status": "verified",
+          "evidence": "Established external practice schedule reported by learner"
+        },
+        {
+          "id": "P0-03",
+          "title": "56 words documented in README",
+          "status": "verified",
+          "evidence": "README.md (inspected 2026-11-09)"
+        },
+        {
+          "id": "P0-04",
+          "title": "Weekly 2–8 November archive exists",
+          "status": "verified",
+          "evidence": "README.md (inspected 2026-11-09)"
+        },
+        {
+          "id": "P0-05",
+          "title": "Verify Sunday GitHub archive reliability",
+          "status": "not_evidenced",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "phase-1",
+      "name": "Methodology and documentation",
+      "tasks": [
+        {
+          "id": "P1-01",
+          "title": "Learning plan drafted",
+          "status": "verified",
+          "evidence": "docs/LEARNING_PLAN.md (proposal branch)"
+        },
+        {
+          "id": "P1-02",
+          "title": "AI agent methodology drafted",
+          "status": "verified",
+          "evidence": "docs/AI_AGENT.md (proposal branch)"
+        },
+        {
+          "id": "P1-03",
+          "title": "Deterministic status generator added",
+          "status": "verified",
+          "evidence": "scripts/update_status.py (proposal branch)"
+        },
+        {
+          "id": "P1-04",
+          "title": "Documentation reviewed and merged",
+          "status": "not_evidenced",
+          "evidence": null
+        },
+        {
+          "id": "P1-05",
+          "title": "Status workflow successful after merge",
+          "status": "not_evidenced",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "phase-2",
+      "name": "Optional practice evidence",
+      "tasks": [
+        {
+          "id": "P2-01",
+          "title": "Opt-in answer capture with privacy rules",
+          "status": "not_evidenced",
+          "evidence": null
+        },
+        {
+          "id": "P2-02",
+          "title": "Concept schema and validation",
+          "status": "not_evidenced",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "phase-3",
+      "name": "Adaptive practice",
+      "tasks": [
+        {
+          "id": "P3-01",
+          "title": "Recurring error review from consented attempts",
+          "status": "not_evidenced",
+          "evidence": null
+        },
+        {
+          "id": "P3-02",
+          "title": "Small delayed-recall suggestions",
+          "status": "not_evidenced",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "phase-4",
+      "name": "Optional B2/C1 corpus work",
+      "tasks": [
+        {
+          "id": "P4-01",
+          "title": "Versioned decomposition prompt with tests",
+          "status": "not_evidenced",
+          "evidence": null
+        }
+      ]
+    }
+  ]
+}

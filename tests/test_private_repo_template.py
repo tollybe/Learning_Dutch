@@ -1,4 +1,4 @@
-"""Check that the private repository starter mirrors only explicitly public files."""
+"""Tests for the one-way private repository mirror."""
 import importlib.util
 import json
 import tempfile
@@ -37,12 +37,25 @@ class PrivateRepoTemplateTests(unittest.TestCase):
             self.assertEqual(manifest["source_commit"], sha)
             self.assertEqual(manifest["imported_paths"], list(module.ALLOWED))
 
-    def test_incomplete_public_source_cannot_partially_sync(self):
+    def test_public_main_can_omit_unmerged_optional_docs(self):
         with tempfile.TemporaryDirectory() as tmp:
             source, private = Path(tmp) / "public", Path(tmp) / "private"
             source.mkdir()
             private.mkdir()
-            (source / "README.md").write_text("only one file", encoding="utf-8")
+            (source / "README.md").write_text("One public word", encoding="utf-8")
+            changed = module.sync(source, private, "a" * 40)
+            self.assertEqual(set(changed), {"README.md", "SOURCE.json"})
+            manifest = json.loads((private / "public_reference/SOURCE.json").read_text())
+            self.assertEqual(manifest["imported_paths"], ["README.md"])
+            self.assertEqual(module.sync(source, private, "a" * 40), [])
+
+    def test_missing_mandatory_readme_cannot_partially_sync(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            source, private = Path(tmp) / "public", Path(tmp) / "private"
+            source.mkdir()
+            private.mkdir()
+            (source / "docs").mkdir()
+            (source / "docs/ROADMAP.md").write_text("Draft", encoding="utf-8")
             with self.assertRaises(FileNotFoundError):
                 module.sync(source, private, "a" * 40)
             self.assertFalse((private / "public_reference").exists())
@@ -51,6 +64,24 @@ class PrivateRepoTemplateTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(ValueError):
                 module.sync(Path(tmp), Path(tmp), "not-a-sha")
+
+    def test_obsolete_approved_file_removed_but_private_data_preserved(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            source, private = Path(tmp) / "public", Path(tmp) / "private"
+            source.mkdir()
+            private.mkdir()
+            (source / "README.md").write_text("Public lessons", encoding="utf-8")
+            extra = source / "docs/LEARNING_PLAN.md"
+            extra.parent.mkdir(parents=True)
+            extra.write_text("Public plan", encoding="utf-8")
+            module.sync(source, private, "a" * 40)
+            (private / "data").mkdir()
+            (private / "data/notes.txt").write_text("never delete", encoding="utf-8")
+            extra.unlink()
+            changed = module.sync(source, private, "b" * 40)
+            self.assertIn("docs/LEARNING_PLAN.md (removed)", changed)
+            self.assertEqual((private / "data/notes.txt").read_text(), "never delete")
+
 
 if __name__ == "__main__":
     unittest.main()

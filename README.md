@@ -2,6 +2,15 @@
 
 A growing archive of practical B1–B2 Dutch vocabulary, with a deliberately **onnodig bekakt** (unnecessarily posh) twist.
 
+## Learning approach
+
+The daily word is enough: no catch-up homework. ChatGPT provides one optional sentence challenge and brief adaptive feedback; longer practice, Rosie-walk speaking and deeper analysis are opt-in.
+
+- [Sustainable learning plan](docs/LEARNING_PLAN.md)
+- [Phased roadmap](docs/ROADMAP.md) and [generated project status](docs/STATUS.md)
+- [Linguistic quality and evidence guide](docs/QUALITY_AND_EVIDENCE.md)
+- [AI maintainer instructions](docs/AI_AGENT.md)
+
 ## Vocabulary archive
 
 | # | Dutch word | Type | English meaning |

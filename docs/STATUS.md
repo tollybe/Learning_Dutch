@@ -35,13 +35,13 @@ Verified: **10 / 12** · Needs review: **0** · Not evidenced: **2**
 
 ## Optional practice evidence
 
-Verified: **0 / 6** · Needs review: **0** · Not evidenced: **6**
+Verified: **2 / 6** · Needs review: **0** · Not evidenced: **4**
 
 - [ ] **P2-01** Opt-in answer capture with privacy rules (not_evidenced)
 - [ ] **P2-02** Concept schema and validation (not_evidenced)
-- [ ] **P2-03** Separate private repository created and visibility verified (not_evidenced)
-- [ ] **P2-04** Public-to-private sync successfully executed (not_evidenced)
-- [ ] **P2-05** Learner explicitly opts in before event capture (not_evidenced)
+- [x] **P2-03** Separate private repository created and visibility verified (verified) — evidence: Private repository visibility and write access verified via GitHub connector, 2026-11-09
+- [x] **P2-04** Public-to-private sync successfully executed (verified) — evidence: Private sync bot commit verified, SOURCE.json records public main SHA; private README mirror equals public main, 2026-11-09
+- [ ] **P2-05** Private event-report pipeline tested without real learner data (not_evidenced)
 - [ ] **P2-06** Learner opted into recording real interactions (not_evidenced)
 
 ## Adaptive practice

@@ -12,6 +12,8 @@ ALLOWED = (
     "docs/QUALITY_AND_EVIDENCE.md",
     "docs/ROADMAP.md",
     "docs/AI_AGENT.md",
+    "docs/TELEMETRY_AND_SYNC.md",
+    "docs/CHATGPT_INTEGRATION.md",
 )
 MAX_BYTES = 500_000
 

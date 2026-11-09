@@ -12,8 +12,8 @@ Reduce learner workload. Protect the single daily word and existing Wednesday/Sa
 Read [LEARNING_PLAN.md](LEARNING_PLAN.md), [ROADMAP.md](ROADMAP.md), and generated [STATUS.md](STATUS.md) before proposing changes.
 
 ## Phase assessment and auto-updates
-- Run `python scripts/update_status.py --check` to detect stale generated documentation.
-- The automation refreshes `docs/STATUS.md` using deterministic structured data; it does **not** call a language model or claim learning improvement.
+- Run `python scripts/assess_project.py` and then `python scripts/update_status.py --check` to detect stale generated documentation.
+- The automation first runs `scripts/assess_project.py` to verify a limited set of objective repository facts, then refreshes `docs/STATUS.md`. It does **not** call a language model or claim learning improvement.
 - To change project-state flags, verify the corresponding repository evidence first, update the JSON in a PR, and include a rationale and links. Do not mark tasks completed from plan text alone.
 - A future AI assessor may compare roadmap tasks with files, commits, test outcomes and workflow runs; it must label findings `verified`, `needs_review` or `not_evidenced`. It should create a PR for review, not silently edit `main`.
 - Automatic phase progression is forbidden; next-phase suggestions are advisory and must consider user effort.

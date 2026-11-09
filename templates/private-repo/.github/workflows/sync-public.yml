@@ -1,0 +1,46 @@
+name: Sync approved public learning material
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Monday morning in the Netherlands; UTC avoids daylight-saving confusion.
+    - cron: '10 4 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  sync-public:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout private learning repository
+        uses: actions/checkout@v4
+      - name: Checkout public lessons without credentials
+        uses: actions/checkout@v4
+        with:
+          repository: tollybe/Learning_Dutch
+          ref: main
+          path: .public_checkout
+          persist-credentials: false
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Copy approved public material only
+        run: |
+          python scripts/sync_public.py --source .public_checkout --commit "$(git -C .public_checkout rev-parse HEAD)"
+          rm -rf .public_checkout
+      - name: Commit only the private public_reference directory
+        shell: bash
+        run: |
+          if [[ -n "$(git status --porcelain -- public_reference)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -- public_reference
+            git commit -m "docs: sync approved public Dutch-learning materials"
+            git push
+          else
+            echo "Public learning reference is already up to date."
+          fi

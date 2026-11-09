@@ -26,10 +26,11 @@ The authoritative project-task ledger is `progress/project-state.json`; `docs/ST
 - [x] Document the public/private visibility boundary and ChatGPT read-receipt limitations.
 - [x] Prepare private-repo starter: one-way allowlisted public → private materials sync.
 - [x] Prepare explicit-event writer contract, private commit-triggered report and tests.
-- [ ] Create `tollybe/Learning_Dutch_Private` **as a private repository**; GitHub integration cannot create new repositories.
-- [ ] Grant the connected GitHub app access to the new private repository.
-- [ ] Install `templates/private-repo/` files into that private repository, verify its visibility and Actions permissions.
-- [ ] Run and verify one-way sync; only **merged** public `main` material should be imported.
+- [x] Create and verify `tollybe/Learning_Dutch_Private` **as a private repository**.
+- [x] Confirm the GitHub app can write to the private repository.
+- [x] Install the private starter and verify privacy.
+- [x] Verify first one-way sync: private README mirror matches **merged** public `main` and has an automated sync commit.
+- [ ] Re-run after public PR merges to import the documentation.
 - [ ] Test a deliberately non-sensitive example event after explicitly approving it.
 - [ ] Verify a private event commit triggers the learning report workflow.
 - [ ] Only then consider a scheduled ChatGPT task to propose/commit approved event summaries; do not assume read/open tracking exists.

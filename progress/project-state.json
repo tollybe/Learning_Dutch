@@ -101,6 +101,18 @@
           "title": "Private repo sync starter and tests available",
           "status": "verified",
           "evidence": "templates/private-repo/ and tests/test_private_repo_template.py (files; not deployed)"
+        },
+        {
+          "id": "P1-11",
+          "title": "ChatGPT event-to-private-GitHub integration contract documented",
+          "status": "verified",
+          "evidence": "docs/CHATGPT_INTEGRATION.md (automated file check)"
+        },
+        {
+          "id": "P1-12",
+          "title": "Private consented event report starter and tests added",
+          "status": "verified",
+          "evidence": "templates/private-repo/scripts/learning_events.py + tests/test_private_learning_events.py (automated file check)"
         }
       ]
     },
@@ -135,6 +147,12 @@
         {
           "id": "P2-05",
           "title": "Learner explicitly opts in before event capture",
+          "status": "not_evidenced",
+          "evidence": null
+        },
+        {
+          "id": "P2-06",
+          "title": "Learner opted into recording real interactions",
           "status": "not_evidenced",
           "evidence": null
         }

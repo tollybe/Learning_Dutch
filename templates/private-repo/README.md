@@ -4,7 +4,7 @@ This starter must be installed in a **private GitHub repository**. It contains *
 
 ## What it does
 
-A private GitHub Actions workflow copies a strict allowlist of *public* teaching materials from `tollybe/Learning_Dutch` at `main` into `public_reference/`, on Monday morning UTC or on manual dispatch. It commits only those copied files to this **private** repo. It never exports private data to the public project.
+Two private GitHub Actions workflows are provided. The public-material sync copies a strict allowlist of *public* teaching materials from `tollybe/Learning_Dutch` at `main` into `public_reference/`, on Monday morning UTC or on manual dispatch. The optional learning-report workflow validates event files in `data/events/` and regenerates a **private** activity summary whenever an authorised tool commits a consented event. Neither workflow exports private data to the public project.
 
 ## Setup
 
@@ -22,5 +22,11 @@ A private GitHub Actions workflow copies a strict allowlist of *public* teaching
 - `docs/PRIVACY.md`: privacy and evidence boundaries.
 - `schemas/telemetry-event.schema.json`: future opt-in event format; no event capture process is enabled.
 - `scripts/sync_public.py`: deterministic, non-networked text-file copier.
+- `scripts/learning_events.py`: validates event files and creates a private summary without assigning a mastery score.
+- `docs/LEARNING_ACTIVITY.md`: empty-by-default, generated private summary.
+
+### How ChatGPT could write events
+
+Once the GitHub app has **write** access to this private repository, the learner can explicitly request a minimal event commit. A supported ChatGPT/Codex tool creates a file such as `data/events/testevent_001.json`; the `learning-report.yml` workflow then validates records and updates `docs/LEARNING_ACTIVITY.md`. **This is not automatic observation of chat replies or message views.** A scheduled writer or a custom capture integration is a separate feature requiring verified tool access and consent. See the public project's `docs/CHATGPT_INTEGRATION.md`.
 
 **No ChatGPT read receipts:** The ChatGPT task notification being generated does not tell us whether the message was opened. Never infer “viewed” or engagement from a task run.

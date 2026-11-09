@@ -12,17 +12,17 @@ Verified: **4 / 5** · Needs review: **0** · Not evidenced: **1**
 
 - [x] **P0-01** Daily word habit exists (verified) — evidence: README.md (word archive); external daily reminder reported by learner
 - [x] **P0-02** Wed/Sat B1 practice exists (verified) — evidence: Established external practice schedule reported by learner
-- [x] **P0-03** 56 words documented in README (verified) — evidence: README.md (inspected 2026-11-09)
-- [x] **P0-04** Weekly 2–8 November archive exists (verified) — evidence: README.md (inspected 2026-11-09)
+- [x] **P0-03** 56 words documented in README (verified) — evidence: README.md: 56 numbered word entries (automated audit)
+- [x] **P0-04** Weekly 2–8 November archive exists (verified) — evidence: README.md: 2–8 November 2026 weekly archive (automated audit)
 - [ ] **P0-05** Verify Sunday GitHub archive reliability (not_evidenced)
 
 ## Methodology and documentation
 
 Verified: **3 / 5** · Needs review: **0** · Not evidenced: **2**
 
-- [x] **P1-01** Learning plan drafted (verified) — evidence: docs/LEARNING_PLAN.md (proposal branch)
-- [x] **P1-02** AI agent methodology drafted (verified) — evidence: docs/AI_AGENT.md (proposal branch)
-- [x] **P1-03** Deterministic status generator added (verified) — evidence: scripts/update_status.py (proposal branch)
+- [x] **P1-01** Learning plan drafted (verified) — evidence: docs/LEARNING_PLAN.md (automated file check)
+- [x] **P1-02** AI agent methodology drafted (verified) — evidence: docs/AI_AGENT.md (automated file check)
+- [x] **P1-03** Deterministic status generator added (verified) — evidence: scripts/update_status.py (automated file check)
 - [ ] **P1-04** Documentation reviewed and merged (not_evidenced)
 - [ ] **P1-05** Status workflow successful after merge (not_evidenced)
 

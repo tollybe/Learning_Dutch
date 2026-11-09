@@ -23,13 +23,13 @@
           "id": "P0-03",
           "title": "56 words documented in README",
           "status": "verified",
-          "evidence": "README.md (inspected 2026-11-09)"
+          "evidence": "README.md: 56 numbered word entries (automated audit)"
         },
         {
           "id": "P0-04",
           "title": "Weekly 2–8 November archive exists",
           "status": "verified",
-          "evidence": "README.md (inspected 2026-11-09)"
+          "evidence": "README.md: 2–8 November 2026 weekly archive (automated audit)"
         },
         {
           "id": "P0-05",
@@ -47,19 +47,19 @@
           "id": "P1-01",
           "title": "Learning plan drafted",
           "status": "verified",
-          "evidence": "docs/LEARNING_PLAN.md (proposal branch)"
+          "evidence": "docs/LEARNING_PLAN.md (automated file check)"
         },
         {
           "id": "P1-02",
           "title": "AI agent methodology drafted",
           "status": "verified",
-          "evidence": "docs/AI_AGENT.md (proposal branch)"
+          "evidence": "docs/AI_AGENT.md (automated file check)"
         },
         {
           "id": "P1-03",
           "title": "Deterministic status generator added",
           "status": "verified",
-          "evidence": "scripts/update_status.py (proposal branch)"
+          "evidence": "scripts/update_status.py (automated file check)"
         },
         {
           "id": "P1-04",

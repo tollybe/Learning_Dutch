@@ -2,8 +2,13 @@ name: Sync approved public learning material
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-public.yml'
+      - 'scripts/sync_public.py'
   schedule:
-    # Monday morning in the Netherlands; UTC avoids daylight-saving confusion.
+    # Mondays, 04:10 UTC (after the public Sunday archive).
     - cron: '10 4 * * 1'
 
 permissions:
@@ -17,18 +22,15 @@ jobs:
     steps:
       - name: Checkout private learning repository
         uses: actions/checkout@v4
-      - name: Checkout public lessons without credentials
-        uses: actions/checkout@v4
-        with:
-          repository: tollybe/Learning_Dutch
-          ref: main
-          path: .public_checkout
-          persist-credentials: false
+      - name: Clone merged public material without private credentials
+        shell: bash
+        run: git clone --quiet --depth 1 --branch main https://github.com/tollybe/Learning_Dutch.git .public_checkout
       - name: Install Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Copy approved public material only
+        shell: bash
         run: |
           python scripts/sync_public.py --source .public_checkout --commit "$(git -C .public_checkout rev-parse HEAD)"
           rm -rf .public_checkout

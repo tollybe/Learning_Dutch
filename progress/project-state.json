@@ -135,14 +135,14 @@
         {
           "id": "P2-03",
           "title": "Separate private repository created and visibility verified",
-          "status": "not_evidenced",
-          "evidence": null
+          "status": "verified",
+          "evidence": "Private repository visibility and write access verified via GitHub connector, 2026-11-09"
         },
         {
           "id": "P2-04",
           "title": "Public-to-private sync successfully executed",
-          "status": "not_evidenced",
-          "evidence": null
+          "status": "verified",
+          "evidence": "Private sync bot commit verified, SOURCE.json records public main SHA; private README mirror equals public main, 2026-11-09"
         },
         {
           "id": "P2-05",

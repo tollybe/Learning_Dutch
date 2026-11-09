@@ -22,6 +22,19 @@ The authoritative project-task ledger is `progress/project-state.json`; `docs/ST
 - [ ] Verify CI and automation run correctly **after** merging the PR.
 - [ ] Review the plan with the learner before introducing personal evidence capture.
 
+## Separate private repository and automation setup
+- [x] Document the public/private visibility boundary and ChatGPT read-receipt limitations.
+- [x] Prepare private-repo starter: one-way allowlisted public → private materials sync.
+- [x] Prepare explicit-event writer contract, private commit-triggered report and tests.
+- [ ] Create `tollybe/Learning_Dutch_Private` **as a private repository**; GitHub integration cannot create new repositories.
+- [ ] Grant the connected GitHub app access to the new private repository.
+- [ ] Install `templates/private-repo/` files into that private repository, verify its visibility and Actions permissions.
+- [ ] Run and verify one-way sync; only **merged** public `main` material should be imported.
+- [ ] Test a deliberately non-sensitive example event after explicitly approving it.
+- [ ] Verify a private event commit triggers the learning report workflow.
+- [ ] Only then consider a scheduled ChatGPT task to propose/commit approved event summaries; do not assume read/open tracking exists.
+- [ ] Keep any private → public insight sharing manual, anonymised and reviewed.
+
 ## Phase 2 — Tiny, consent-first evidence capture (optional)
 - [ ] Define a minimal, stable concept identifier and evidence schema.
 - [ ] Ask whether **any** abstract feedback should be recorded; default to no logging.

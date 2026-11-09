@@ -1,47 +1,63 @@
-# Roadmap and checklist
+# Roadmap — learner benefit before engineering complexity
 
-**Source of truth for completion:** `progress/project-state.json`. The generated assessment lives in [STATUS.md](STATUS.md). Checkboxes below are the design backlog, not an automatically verified source of truth.
+**The learner's commitment is already full.** All checklist items below are tasks for the AI/developer, not homework.
 
-## Phase 0 — Preserve existing habits
-- [x] Daily single-word routine is established externally.
-- [x] Wednesday and Saturday B1 practices established externally.
-- [x] README contains 56 numbered vocabulary words as checked 2026-11-09.
-- [x] README has a weekly archive for 2–8 November 2026.
-- [ ] Verify the Sunday archive automation reliably updates GitHub; the existing archive is not evidence that it always succeeds.
-- [ ] Confirm that all reminders remain optional and lightweight.
+The authoritative project-task ledger is `progress/project-state.json`; `docs/STATUS.md` is generated. The checkboxes here are directional planning only. A verified *file* shows that a component exists, not that it works in production or improves Dutch.
 
-## Phase 1 — Clear plan and maintainable documentation
-- [x] Define sustainable habits, energy modes and use of native speakers.
-- [x] Document AI agent workflow and guarded completion assessment.
-- [x] Implement reproducible status reporting from structured project state.
-- [ ] Review and merge this documentation proposal.
-- [ ] Confirm privacy expectations before storing individual attempts.
+## Phase 0 — Preserve the habit (current baseline)
+- [x] Existing daily 08:00 single-word reminder.
+- [x] Existing Wednesday and Saturday short B1 practice.
+- [x] GitHub README contains 56 numbered vocabulary entries (inspected 2026-11-09).
+- [x] GitHub README contains the 2–8 November 2026 weekly table.
+- [ ] **Verify** that the Sunday GitHub archive automation continues to update the repository; an existing table is not proof of reliability.
+- [ ] Check user experience: the reminder is still enjoyable, and missed days never accumulate work.
 
-## Phase 2 — Lightweight evidence capture (opt-in)
-- [ ] Create stable concept IDs and a tiny format for voluntary responses.
-- [ ] Add schema validation and test fixtures.
-- [ ] Preserve existing README and avoid premature migration.
-- [ ] Ensure skipped sessions remain valid and unpenalised.
+## Phase 1 — Small, trustworthy methodology and tools
+- [x] Document workload limits and optional Rosie-walk mode.
+- [x] Default to one useful correction and evidence-based adaptation.
+- [x] Add expert-review safeguards: listening, interaction, retrieval, register and spontaneous transfer.
+- [x] Document evidence ladder, feedback QA cases and privacy boundaries.
+- [x] Add deterministic project evidence and status generation, with tests defined.
+- [x] Define PR-based status refresh (no direct `main` write).
+- [ ] Verify CI and automation run correctly **after** merging the PR.
+- [ ] Review the plan with the learner before introducing personal evidence capture.
 
-## Phase 3 — Adaptation after evidence is available
-- [ ] Review genuine, voluntarily submitted errors for recurring patterns.
-- [ ] Offer delayed recall in small doses, without creating backlogs.
-- [ ] Keep accuracy, naturalness, register and independent production separate.
-- [ ] Evaluate whether personalisation improves learning without adding burden.
+## Phase 2 — Tiny, consent-first evidence capture (optional)
+- [ ] Define a minimal, stable concept identifier and evidence schema.
+- [ ] Ask whether **any** abstract feedback should be recorded; default to no logging.
+- [ ] Validate JSON and strip names, stories, conversations and voice transcripts.
+- [ ] Capture prompted vs independent vs delayed use without treating silence as failure.
+- [ ] Pilot with a small number of voluntarily provided examples, then evaluate burden before expanding.
 
-## Phase 4 — Optional B2/C1 analytical enrichment
-- [ ] Version the linguistic decomposition prompt.
-- [ ] Store article provenance and copyright-safe evidence.
-- [ ] Test examples and explanations for idiomaticity and source fidelity.
-- [ ] Generate presentation Markdown from structured records.
+## Phase 3 — Adaptation and real-life transfer
+- [ ] Revisit known vocabulary naturally inside the existing word schedule; do not add reminders.
+- [ ] Prioritise patterns supported by repeated evidence, not one AI correction.
+- [ ] Offer a **voluntary**, unprompted 1-minute conversation check every few weeks at most, not a new recurring notification.
+- [ ] Compare qualitative usefulness and enjoyment, not streaks or raw word counts.
+- [ ] Allow a quick “no correction today” mode.
 
-## Phase gates
-Do not progress because a calendar date passed. Prioritise enjoyment, actual learner benefit, evidence of completion and manageable maintenance. If the process feels heavy, revert to one daily word.
+## Phase 4 — Optional deeper B2/C1 analysis
+- [ ] Version the long-form article decomposition prompt.
+- [ ] Keep source evidence and copyright constraints.
+- [ ] Test idiomaticity and alternative registers before presenting absolute corrections.
+- [ ] Only build advanced reporting if it leads to a meaningful learner benefit.
 
-## AI engineering to-do
-- [x] Create an initial machine-readable plan status and generator.
-- [x] Add scheduled status regeneration and objective repository-evidence audit, with no autonomous phase promotion.
-- [ ] Verify the workflow actually runs successfully after merging.
-- [ ] Create an optional AI assessor that reads commits, action runs and learning artefacts and proposes state updates in a PR with links to evidence.
-- [ ] Require human review for any unverified or subjective progress claims.
-- [ ] Add regression tests before changing exercise generation prompts.
+## Phase gates (do not auto-promote)
+- **0 → 1:** Existing experience protected, archive behaviour checked.
+- **1 → 2:** Plan and tooling merged, CI passes, user consents to any learning-data collection.
+- **2 → 3:** A small set of real consented examples exists and produces useful advice without extra workload.
+- **3 → 4:** Learner explicitly wants more advanced analysis and simpler options have been tried.
+
+When two phases have incomplete dependencies, the status remains **not evidenced** even if implementation files exist.
+
+## AI engineering to-do (not for the learner)
+- [x] Add project-status generator, deterministic evidence auditor and basic regression tests.
+- [x] Make status updates reviewable pull requests instead of direct writes to `main`.
+- [ ] Verify the first CI run and repository permission for bot-created PRs.
+- [ ] Verify the existing weekly vocabulary archive separately.
+- [ ] Later, optionally implement an AI project assessor that links evidence to proposed task changes in a PR, with human review.
+- [ ] Later, optionally add consent-first progress records and prompt regression tests for Dutch-language feedback.
+
+## Decision rule for new features
+
+Only proceed if it demonstrably supports **sustainability → real-world transfer → accuracy**, without adding more learner-facing reminders or making GitHub a daily task. Prefer removing a burden to collecting more data.

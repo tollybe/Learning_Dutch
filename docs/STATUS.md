@@ -18,7 +18,7 @@ Verified: **4 / 5** · Needs review: **0** · Not evidenced: **1**
 
 ## Methodology and documentation
 
-Verified: **6 / 8** · Needs review: **0** · Not evidenced: **2**
+Verified: **10 / 12** · Needs review: **0** · Not evidenced: **2**
 
 - [x] **P1-01** Learning plan drafted (verified) — evidence: docs/LEARNING_PLAN.md (automated file check)
 - [x] **P1-02** AI agent methodology drafted (verified) — evidence: docs/AI_AGENT.md (automated file check)
@@ -28,13 +28,21 @@ Verified: **6 / 8** · Needs review: **0** · Not evidenced: **2**
 - [x] **P1-06** Linguistic QA and learning-evidence rubric documented (verified) — evidence: docs/QUALITY_AND_EVIDENCE.md (automated file check)
 - [x] **P1-07** Status-report regression test file added (verified) — evidence: tests/test_project_status.py (automated file check)
 - [x] **P1-08** PR-based status automation configured (verified) — evidence: .github/workflows/project-status.yml (automated file check; execution unverified)
+- [x] **P1-09** Public telemetry and privacy boundary documented (verified) — evidence: docs/TELEMETRY_AND_SYNC.md (file existence; design only)
+- [x] **P1-10** Private repo sync starter and tests available (verified) — evidence: templates/private-repo/ and tests/test_private_repo_template.py (files; not deployed)
+- [x] **P1-11** ChatGPT event-to-private-GitHub integration contract documented (verified) — evidence: docs/CHATGPT_INTEGRATION.md (automated file check)
+- [x] **P1-12** Private consented event report starter and tests added (verified) — evidence: templates/private-repo/scripts/learning_events.py + tests/test_private_learning_events.py (automated file check)
 
 ## Optional practice evidence
 
-Verified: **0 / 2** · Needs review: **0** · Not evidenced: **2**
+Verified: **0 / 6** · Needs review: **0** · Not evidenced: **6**
 
 - [ ] **P2-01** Opt-in answer capture with privacy rules (not_evidenced)
 - [ ] **P2-02** Concept schema and validation (not_evidenced)
+- [ ] **P2-03** Separate private repository created and visibility verified (not_evidenced)
+- [ ] **P2-04** Public-to-private sync successfully executed (not_evidenced)
+- [ ] **P2-05** Learner explicitly opts in before event capture (not_evidenced)
+- [ ] **P2-06** Learner opted into recording real interactions (not_evidenced)
 
 ## Adaptive practice
 

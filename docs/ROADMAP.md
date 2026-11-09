@@ -40,7 +40,7 @@ Do not progress because a calendar date passed. Prioritise enjoyment, actual lea
 
 ## AI engineering to-do
 - [x] Create an initial machine-readable plan status and generator.
-- [x] Add scheduled status regeneration, with low write permissions and no autonomous phase promotion.
+- [x] Add scheduled status regeneration and objective repository-evidence audit, with no autonomous phase promotion.
 - [ ] Verify the workflow actually runs successfully after merging.
 - [ ] Create an optional AI assessor that reads commits, action runs and learning artefacts and proposes state updates in a PR with links to evidence.
 - [ ] Require human review for any unverified or subjective progress claims.

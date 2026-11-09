@@ -87,7 +87,7 @@ The distinction between encountered, recognised, prompted, independent and delay
 
 ## Privacy and implementation boundaries
 
-The repository is public as of the initial review. Do not automatically upload private answers, audio, partner/family conversations, personally identifying situations or voice transcripts. Only explicitly consented, minimal, preferably abstract learning evidence may later be recorded. No automated feedback-to-GitHub synchronisation exists yet; the current system documents the workflow and creates project-status reports.
+The repository is public as of the initial review. Do not automatically upload private answers, audio, partner/family conversations, personally identifying situations or voice transcripts. Only explicitly consented, minimal, preferably abstract learning evidence may later be recorded. No automated feedback-to-GitHub synchronisation exists yet. A **private-repository starter** defines an explicit event writer and commit-triggered report, but cannot capture ChatGPT read receipts. Recording remains off until the separate private repository is created and the learner opts in. See [CHATGPT_INTEGRATION.md](CHATGPT_INTEGRATION.md).
 
 ## Decision log
 

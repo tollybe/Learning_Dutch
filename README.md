@@ -10,6 +10,8 @@ The daily word is enough: no catch-up homework. ChatGPT provides one optional se
 - [Phased roadmap](docs/ROADMAP.md) and [generated project status](docs/STATUS.md)
 - [Linguistic quality and evidence guide](docs/QUALITY_AND_EVIDENCE.md)
 - [AI maintainer instructions](docs/AI_AGENT.md)
+- [Telemetry and private repo design](docs/TELEMETRY_AND_SYNC.md)
+- [ChatGPT ↔ GitHub automation plan](docs/CHATGPT_INTEGRATION.md)
 
 ## Vocabulary archive
 

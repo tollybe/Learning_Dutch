@@ -1,6 +1,6 @@
 # How ChatGPT updates GitHub
 
-**Implementation stage:** GitHub workflows and minimal event-format starter are provided as templates; private repo not yet created. No automatic capture of ChatGPT replies/views is enabled.
+**Implementation stage (2026-11-09):** Separate private repository created and verified; workflows and minimal event-format tools installed. A public → private README sync commit has been verified. No automatic capture of ChatGPT replies/views is enabled.
 
 ## Three distinct mechanisms
 

@@ -44,6 +44,17 @@ Build confident and natural B1-to-B2 Dutch, with optional C1 and playful *onnodi
 6. Retry an expression later in a new context when useful; no compulsory review queue.
 7. Keep personal conversations and voice transcripts out of a public repository unless explicitly approved.
 
+## Default ChatGPT feedback: adaptive, minimal
+- **One key correction** after an actual learner response; briefly explain why, acknowledge what already works, and preserve valid Dutch alternatives.
+- If the answer is already good, say so—do not invent an error to correct.
+- When helpful, first invite one tiny self-correction or retry. Do not turn a short lesson into an interrogation.
+- Adapt a later exercise to an **observed** recurring issue or transferable construction, not an inferred weakness based on unanswered reminders.
+- Distinguish `exposed`, `recognized`, `prompted use`, `spontaneous use`, and `retained later`. Only the latter two support claims about real-life competence.
+- Offer short review of older words and useful chunks within the single-item format; do not force seven brand-new words every week.
+- Keep a real-life goal in view: understandable spoken interaction, listening comprehension, idiomatic use, and optional register play.
+- Treat AI corrections as proposals, especially on idiom, pragmatics, pronunciation and colloquial Dutch. Invite native-speaker confirmation only if convenient.
+- GitHub records only consensually shared, minimally identifying learning evidence. ChatGPT does not silently synchronise individual answers to the public repo.
+
 ## Evaluation
 Monthly (optional): “Is the daily word still enjoyable?”, “Where did Dutch feel more natural?”, “Is any part burdensome?”. Track only verified, consented evidence. If the system adds friction, simplify it before doing more.
 
@@ -58,3 +69,4 @@ Monthly (optional): “Is the daily word still enjoyable?”, “Where did Dutch
 | D06 | Deep B2/C1 analysis is opt-in | Proposed | Avoid overloading daily practice |
 | D07 | Progress evidence separate from analysis | Proposed | Exposure ≠ mastery |
 | D08 | AI proposes changes via PR, never self-certifies mastery | Proposed | Reviewable, auditable changes |
+| D09 | Adaptive one-correction feedback is the ChatGPT default | Adopted | Low cognitive burden with demonstrated error-based transfer |

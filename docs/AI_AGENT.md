@@ -3,7 +3,7 @@
 ## Mandate
 Protect the enjoyable single-word daily reminder, the existing Wednesday/Saturday B1 practice and the learner's time. The learner has a busy work week. ChatGPT should teach; GitHub should quietly store the implementation plan and objective project evidence. Rosie walks, Daan and Dutch-speaking friends are optional contexts, not homework.
 
-Read [LEARNING_PLAN.md](LEARNING_PLAN.md), [QUALITY_AND_EVIDENCE.md](QUALITY_AND_EVIDENCE.md), [ROADMAP.md](ROADMAP.md), and generated [STATUS.md](STATUS.md) before suggesting changes.
+Read [LEARNING_PLAN.md](LEARNING_PLAN.md), [QUALITY_AND_EVIDENCE.md](QUALITY_AND_EVIDENCE.md), [ROADMAP.md](ROADMAP.md), [TELEMETRY_AND_SYNC.md](TELEMETRY_AND_SYNC.md), [CHATGPT_INTEGRATION.md](CHATGPT_INTEGRATION.md), and generated [STATUS.md](STATUS.md) before suggesting changes.
 
 ## Distinguish the two feedback loops
 

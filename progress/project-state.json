@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0.0",
+  "policy": "Task completion reflects documented project implementation evidence, not proficiency. Some checks are automated, some are user-reported. Automation success and effectiveness require separate verification.",
+  "phases": [
+    {
+      "id": "phase-0",
+      "name": "Preserve existing habits",
+      "tasks": [
+        {
+          "id": "P0-01",
+          "title": "Daily word habit exists",
+          "status": "verified",
+          "evidence": "README.md (word archive); external daily reminder reported by learner"
+        },
+        {
+          "id": "P0-02",
+          "title": "Wed/Sat B1 practice exists",
+          "status": "verified",
+          "evidence": "Established external practice schedule reported by learner"
+        },
+        {
+          "id": "P0-03",
+          "title": "56 words documented in README",
+          "status": "verified",
+          "evidence": "README.md: 56 numbered word entries (automated audit)"
+        },
+        {
+          "id": "P0-04",
+          "title": "Weekly 2–8 November archive exists",
+          "status": "verified",
+          "evidence": "README.md: 2–8 November 2026 weekly archive (automated audit)"
+        },
+        {
+          "id": "P0-05",
+          "title": "Verify Sunday GitHub archive reliability",
+          "status": "not_evidenced",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "phase-1",
+      "name": "Methodology and documentation",
+      "tasks": [
+        {
+          "id": "P1-01",
+          "title": "Learning plan drafted",
+          "status": "verified",
+          "evidence": "docs/LEARNING_PLAN.md (automated file check)"
+        },
+        {
+          "id": "P1-02",
+          "title": "AI agent methodology drafted",
+          "status": "verified",
+          "evidence": "docs/AI_AGENT.md (automated file check)"
+        },
+        {
+          "id": "P1-03",
+          "title": "Deterministic status generator added",
+          "status": "verified",
+          "evidence": "scripts/update_status.py (automated file check)"
+        },
+        {
+          "id": "P1-04",
+          "title": "Documentation reviewed and merged",
+          "status": "not_evidenced",
+          "evidence": null
+        },
+        {
+          "id": "P1-05",
+          "title": "Status workflow successful after merge",
+          "status": "not_evidenced",
+          "evidence": null
+        },
+        {
+          "id": "P1-06",
+          "title": "Linguistic QA and learning-evidence rubric documented",
+          "status": "verified",
+          "evidence": "docs/QUALITY_AND_EVIDENCE.md (automated file check)"
+        },
+        {
+          "id": "P1-07",
+          "title": "Status-report regression test file added",
+          "status": "verified",
+          "evidence": "tests/test_project_status.py (automated file check)"
+        },
+        {
+          "id": "P1-08",
+          "title": "PR-based status automation configured",
+          "status": "verified",
+          "evidence": ".github/workflows/project-status.yml (automated file check; execution unverified)"
+        },
+        {
+          "id": "P1-09",
+          "title": "Public telemetry and privacy boundary documented",
+          "status": "verified",
+          "evidence": "docs/TELEMETRY_AND_SYNC.md (file existence; design only)"
+        },
+        {
+          "id": "P1-10",
+          "title": "Private repo sync starter and tests available",
+          "status": "verified",
+          "evidence": "templates/private-repo/ and tests/test_private_repo_template.py (files; not deployed)"
+        },
+        {
+          "id": "P1-11",
+          "title": "ChatGPT event-to-private-GitHub integration contract documented",
+          "status": "verified",
+          "evidence": "docs/CHATGPT_INTEGRATION.md (automated file check)"
+        },
+        {
+          "id": "P1-12",
+          "title": "Private consented event report starter and tests added",
+          "status": "verified",
+          "evidence": "templates/private-repo/scripts/learning_events.py + tests/test_private_learning_events.py (automated file check)"
+        }
+      ]
+    },
+    {
+      "id": "phase-2",
+      "name": "Optional practice evidence",
+      "tasks": [
+        {
+          "id": "P2-01",
+          "title": "Opt-in answer capture with privacy rules",
+          "status": "not_evidenced",
+          "evidence": null
+        },
+        {
+          "id": "P2-02",
+          "title": "Concept schema and validation",
+          "status": "not_evidenced",
+          "evidence": null
+        },
+        {
+          "id": "P2-03",
+          "title": "Separate private repository created and visibility verified",
+          "status": "verified",
+          "evidence": "Private repository visibility and write access verified via GitHub connector, 2026-11-09"
+        },
+        {
+          "id": "P2-04",
+          "title": "Public-to-private sync successfully executed",
+          "status": "verified",
+          "evidence": "Private sync bot commit verified, SOURCE.json records public main SHA; private README mirror equals public main, 2026-11-09"
+        },
+        {
+          "id": "P2-05",
+          "title": "Private event-report pipeline tested without real learner data",
+          "status": "not_evidenced",
+          "evidence": null
+        },
+        {
+          "id": "P2-06",
+          "title": "Learner opted into recording real interactions",
+          "status": "not_evidenced",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "phase-3",
+      "name": "Adaptive practice",
+      "tasks": [
+        {
+          "id": "P3-01",
+          "title": "Recurring error review from consented attempts",
+          "status": "not_evidenced",
+          "evidence": null
+        },
+        {
+          "id": "P3-02",
+          "title": "Small delayed-recall suggestions",
+          "status": "not_evidenced",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "id": "phase-4",
+      "name": "Optional B2/C1 corpus work",
+      "tasks": [
+        {
+          "id": "P4-01",
+          "title": "Versioned decomposition prompt with tests",
+          "status": "not_evidenced",
+          "evidence": null
+        }
+      ]
+    }
+  ],
+  "evidence_updated_at": "2026-11-09"
+}

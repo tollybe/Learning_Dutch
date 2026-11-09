@@ -1,0 +1,35 @@
+name: Update private learning activity report
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/events/**'
+      - 'scripts/learning_events.py'
+      - '.github/workflows/learning-report.yml'
+  schedule:
+    - cron: '40 18 * * 0'
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate consented records and generate private report
+        run: python scripts/learning_events.py
+      - name: Commit report only when it changed
+        shell: bash
+        run: |
+          if [[ -n "$(git status --porcelain -- docs/LEARNING_ACTIVITY.md)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -- docs/LEARNING_ACTIVITY.md
+            git commit -m "docs: update private Dutch learning activity"
+            git push
+          fi

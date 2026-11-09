@@ -1,0 +1,75 @@
+name: Project documentation status
+on:
+  pull_request:
+    paths:
+      - README.md
+      - docs/**
+      - progress/**
+      - scripts/**
+      - tests/**
+      - .github/workflows/project-status.yml
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - docs/**
+      - progress/**
+      - scripts/**
+      - tests/**
+      - .github/workflows/project-status.yml
+  schedule:
+    - cron: '15 19 * * 0'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate project documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Assess objective files and generate deterministic status
+        run: |
+          python scripts/assess_project.py
+          python scripts/update_status.py
+      - name: Run regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Check generated status is internally consistent
+        run: python scripts/update_status.py --check
+
+  propose-status-update:
+    name: Propose status update
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit files and regenerate status
+        run: |
+          python scripts/assess_project.py
+          python scripts/update_status.py
+      - name: Create reviewable status PR (only if changed)
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: automation/project-status
+          delete-branch: true
+          add-paths: |
+            progress/project-state.json
+            docs/STATUS.md
+          commit-message: 'docs: refresh objective project status'
+          title: 'docs: refresh objective Dutch-learning project status'
+          body: |
+            Automated, deterministic repository evidence update only.
+            Does not assess or claim Dutch proficiency.
+            Please review before merging.

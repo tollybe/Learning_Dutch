@@ -2,12 +2,12 @@
 
 ## Status (2026-11-09)
 
-**Proposed architecture; no personal telemetry collection is enabled.**
+**Private repository created and public → private README sync verified on 2026-11-09. No personal telemetry collection is enabled.**
 
 - **Public**: `tollybe/Learning_Dutch` — lessons, vocabulary, strategies, prompts, regression tests and anonymised design decisions.
-- **Private (to create)**: `tollybe/Learning_Dutch_Private` — optional, consented engagement/learning evidence and an automatically refreshed **copy of approved public material**.
+- **Private (created; visibility verified)**: `tollybe/Learning_Dutch_Private` — optional, consented engagement/learning evidence and an automatically refreshed **copy of approved public material**.
 - Visibility is repository-wide. A “private branch” inside the public repository is **not private**.
-- The connected GitHub integration can modify existing repositories but cannot create a new repository, so the owner must create the private repository with visibility **Private** before these templates can be installed.
+- The owner created the private repository and its visibility and GitHub connector access were verified on 2026-11-09. The prepared sync/reporting tools were installed there; personal event collection remains disabled.
 
 ## Direction of sync
 
@@ -61,13 +61,13 @@ Do not surface daily “read rates”, streak counts or attention metrics. A wee
 
 A quiet period should prompt **no notification**. The tutor should keep offering the same small daily opportunity.
 
-## Private repository bootstrap (one manual step)
+## Private repository deployment (completed; follow-up checks remain)
 
-1. Create `tollybe/Learning_Dutch_Private` in GitHub and set **Private** (not Public).
-2. Make sure the connected GitHub app has access to that repository; installation access may need to be expanded.
-3. Copy the prepared `templates/private-repo/` files into the private repository root. This can be done by the assistant after it can access the newly created repository.
-4. Enable GitHub Actions and verify the repository is still **Private**.
-5. Run the private `Sync approved public learning material` workflow manually once; then review `public_reference/`.
+1. **Complete:** `tollybe/Learning_Dutch_Private` created and verified **Private**.
+2. **Complete:** Connected GitHub tool has write access.
+3. **Complete:** Starter files installed in the private repository.
+4. **Complete for sync:** A GitHub Actions sync commit produced `public_reference/README.md` and `SOURCE.json`, verified against public `main`; privacy remains verified.
+5. **Pending after public PR merge:** re-sync to import newly merged public `docs/` files.
 6. The workflow is scheduled Monday 04:10 UTC (after the existing Sunday archive), but may run late due to GitHub scheduling. It only imports **merged public `main`**, not drafts or PRs.
 
 The template uses the private repo's own `GITHUB_TOKEN` with `contents: write` to commit **allowlisted public material only to the private repository**. It requires no personal access token and grants no private-repository token to the public repository.
@@ -78,9 +78,10 @@ If private branch protection blocks direct commits, change this importer to crea
 
 - [x] Design directional sync and private telemetry policy.
 - [x] Publish a reusable private-repository starter and tests in the **public** plan repo; no real personal data.
-- [ ] Create and verify `Learning_Dutch_Private` with private visibility (owner step; GitHub connector cannot create repositories).
-- [ ] Install the starter files in that existing private repository.
-- [ ] Run and verify first public → private import; confirm privacy boundary.
+- [x] Create and verify `Learning_Dutch_Private` with private visibility (owner step completed).
+- [x] Install private repository starter files.
+- [x] Verify the first public → private README import and confirm the privacy boundary.
+- [ ] Re-run import after the public documentation PR is merged to include approved docs.
 - [ ] Explicitly agree what, if anything, can be logged about ChatGPT usage.
 - [ ] Implement **consented** response/acknowledgement capture through a supported integration. Read receipts are not available from the current ChatGPT workflow.
 - [ ] Optional: privately summarise evidenced difficulties, without generating additional homework.

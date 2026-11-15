@@ -73,6 +73,11 @@ The daily word is enough: no catch-up homework. ChatGPT provides one optional se
 | 54 | **de vertraging** | Noun | delay |
 | 55 | **meevallen** | Separable verb | to be better or less serious than expected |
 | 56 | **tevreden** | Adjective | satisfied; content |
+| 57 | **ergens tegenop zien** | Expression | to dread something; not look forward to something |
+| 58 | **rekening houden met** | Expression | to take into account; consider |
+| 59 | **het komt erop neer dat** | Expression | the bottom line is that; it boils down to |
+| 60 | **ergens aan toe zijn** | Expression | to be ready for; really need something |
+| 61 | **ergens van bijkomen** | Expression | to recover from something; catch one’s breath |
 
 ## Weekly tables
 
@@ -87,3 +92,15 @@ The daily word is enough: no catch-up homework. ChatGPT provides one optional se
 | **de vertraging** | Noun | delay |
 | **meevallen** | Separable verb | to be better than expected |
 | **tevreden** | Adjective | satisfied / content |
+
+### 9–15 November 2026
+
+| Word | Type | Meaning |
+|---|---|---|
+| **desondanks** | Adverb | nevertheless / despite that |
+| **ergens tegenop zien** | Expression | to dread something / feel reluctant about it |
+| **rekening houden met** | Expression | to take into account / consider |
+| **het komt erop neer dat** | Expression | the bottom line is that / it boils down to |
+| **ergens aan toe zijn** | Expression | to be ready for / really need something |
+| **ergens tegenop zien** | Expression | to dread something / not look forward to something |
+| **ergens van bijkomen** | Expression | to recover from something / catch one’s breath |
